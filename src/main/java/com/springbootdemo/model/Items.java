@@ -2,27 +2,20 @@ package com.springbootdemo.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="Items")
+
+
 public class Items implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	private int itemID;
-	@Column(name="itemName")
+	
 	private String itemName;
-	@Column(name="itemPrice")
+
 	private double itemPrice;
-	@Column(name="itemQuality")
+
 	private String itemQuality;
-	@Column(name="referenceID")
+
 	private static int referenceID;
 
 	public Items() {

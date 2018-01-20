@@ -7,22 +7,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="User")
+
 public class User {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	private int		userId;
-	@Column(name="username")
+	
 	private String	userName;
-	@Column(name="password")
+
 	private String	password;
-	@Column(name="email")
+
 	private String	email;
-	@Column(name="phoneNumber")
+
 	private String	phoneNumber;
-	@Column(name="active")
+
 	private int		active;
 
 	public User() {
