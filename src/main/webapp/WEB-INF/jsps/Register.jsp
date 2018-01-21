@@ -31,7 +31,7 @@
 		Username  <input type="text" name="username" required /> <br></br>
 		Password  <input type="password" name="password" required /><br></br> 
 		Email     <input type="email" name="email" required /> <br></br>
-	Phone Number  <input type="text" name="phonenumber" required /><br></br> 
+	Phone Number  <input type="text" name="phonenumber" required/><br></br> 
 		<a href="Welcome.html"><input type="button" class="btn btn-primary" value="Submit" /></a><br></br>
 
 	</form>
