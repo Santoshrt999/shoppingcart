@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="<c:url value="/resources/static/css/style.css" />"
-	rel="stylesheet">
+<link rel="stylesheet" href="<c:url value="/resources/static/css/style.css" />">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
@@ -35,18 +34,21 @@
 </head>
 
 <body>
+<jsp:useBean id="dao" class="com.springbootdemo.model.UserDAO"></jsp:useBean> <!-- Use this to import the java class -->
+<jsp:useBean id="user" class="com.springbootdemo.model.User"></jsp:useBean>
+<jsp:setProperty property="*" name="user"/> 
 
 	<center>
-		<h3>Welcome to Shop On</h3>
+		<h3 class="lead">Welcome to Shop On Courses</h3>
 	</center>
 	<div class="container">
 		<br></br>
 		<%
-			String name = request.getParameter("username");
-			String pass = request.getParameter("password");
+			String name = user.getUserName();
+			
 		%>
 		<%
-			if (name.equals(request.getParameter("username"))) {
+			if (name!=null && name.equals(user.getUserName())) {
 		%>
 		Hi,
 		<text style="color: royalblue"> <%=name%> <br></text>
@@ -56,11 +58,11 @@
 			<img src="https://s3.amazonaws.com/shopping-buck/Java.jpg">
 			<p class="lead">Java Programming Course</p>
 			<div>
-				<a href="Welcome.html">Add to Cart</a></br> <img
+				<a href="Cart.html">Add to Cart</a></br> <img
 					src="https://s3.amazonaws.com/shopping-buck/web.jpg"
 					class="img-responsive pull-right">
 				<p class="lead">Web Programming Course</p>
-				<a href="Welcome.html">Add to Cart</a></br>
+				<a href="Cart.html">Add to Cart</a></br>
 			</div>
 			<div class="topright">
 				<a href="">Your Cart</a>
@@ -85,11 +87,11 @@
 			<img src="https://s3.amazonaws.com/shopping-buck/Java.jpg">
 			<p class="lead">Java Programming Course</p>
 			<div>
-				<a href="Welcome.html">Add to Cart</a></br> <img
+				<a href="Cart.html">Add to Cart</a></br> <img
 					src="https://s3.amazonaws.com/shopping-buck/web.jpg"
 					class="img-responsive pull-right">
 				<p class="lead">Web Programming Course</p>
-				<a href="Welcome.html">Add to Cart</a></br>
+				<a href="Cart.html">Add to Cart</a></br>
 			</div>
 			<div class="topright">
 				<a href="">Your Cart</a>

@@ -36,4 +36,9 @@ public class TestController {
 	public ModelAndView AddtoCart() {
 		return new ModelAndView("Cart");
 	}
+	
+	@RequestMapping("/")
+	public ModelAndView Main() {
+		return new ModelAndView("Main");
+	}
 }

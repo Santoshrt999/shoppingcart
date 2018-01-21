@@ -16,13 +16,17 @@
 </style>
 <body>
 <center><h3>Welcome to ShopOn</h3></center>
+<jsp:useBean id="dao" class="com.springbootdemo.model.UserDAO"></jsp:useBean> <!-- Use this to import the java class -->
+<jsp:useBean id="user" class="com.springbootdemo.model.User"></jsp:useBean>
+<jsp:setProperty property="*" name="user"/> 
+<%int y = dao.insert(user); %>
 <div class="container">
 <div class="jumbotron">
 
 <center><h3>Login Form</h3></center>
 	<center><form method="get" action="Home.html">
-		Username<input type="text" name="username" /> <br></br>
-		Password <input type="password" name="password" /><br></br> 
+		Username<input type="text" name=<%=user.getUserName() %> /> <br></br>
+		Password <input type="password" name=<%user.getPassword();%> /><br></br> 
 		<a href="Home.html"><input type="button" class="btn btn-success" value="LogIn"/></a><br></br>
 
 	</form>
